@@ -1,13 +1,13 @@
-public class Circle extends Rectangle{
+public class Circle extends Shape{
+    int diameter;
 
-
-    public Circle(int length){
-        super(length, length);
+    public Circle(int diameter){
+        this.diameter = diameter;
     }
 
-
-    public double area(int length){
-        double r = length / 2.0;
+    @Override
+    double area() {
+        double r = diameter / 2.0;
         return Math.PI * r * r;
     }
 }
