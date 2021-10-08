@@ -1,3 +1,5 @@
+import java.awt.*;
+
 abstract class Shape implements Comparable<Shape> {
     //coordinates of the upper left point
     int xpos;
@@ -9,4 +11,9 @@ abstract class Shape implements Comparable<Shape> {
     }
 
     abstract double area();
+    abstract void draw(Graphics2D g);
+    public void setPos(int x, int y){
+        xpos = x;
+        ypos = y;
+    }
 }
