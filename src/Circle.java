@@ -3,8 +3,9 @@ import java.awt.*;
 public class Circle extends Shape{
     int diameter;
 
-    public Circle(int diameter){
+    public Circle(int diameter, Color color){
         this.diameter = diameter;
+        this.color = color;
     }
 
     @Override

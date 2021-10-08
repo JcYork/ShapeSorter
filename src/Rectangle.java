@@ -17,9 +17,10 @@ public class Rectangle extends Shape{
         g.fillRect(xpos, ypos, width, length);
     }
 
-    public Rectangle(int width, int length){
+    public Rectangle(int width, int length, Color color){
         this.width = width;
         this.length = length;
+        this.color = color;
 
     }
 
