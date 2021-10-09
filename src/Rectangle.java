@@ -17,7 +17,7 @@ public class Rectangle extends Shape{
         g.fillRect(xpos, ypos, width, length);
     }
 
-    public Rectangle(int width, int length, Color color){
+    public Rectangle(int length, int width, Color color){
         this.width = width;
         this.length = length;
         this.color = color;

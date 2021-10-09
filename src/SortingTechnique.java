@@ -10,6 +10,6 @@ public class SortingTechnique {
             }
             shapes[j+1] = insertee;
         }
-        System.out.println("Debug: I'm all done sorting");
+        //System.out.println("Debug: I'm all done sorting");
     }
 }

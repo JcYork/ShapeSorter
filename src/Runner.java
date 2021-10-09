@@ -45,17 +45,17 @@ public class Runner extends JPanel{
             g2d.setColor(new Color(rng.nextInt(236) + 20, rng.nextInt(256), rng.nextInt(256)));
             int shapeSelection = rng.nextInt() % 3;
             if(shapeSelection == 0) {
-                shapes[i] = new Rectangle(rng.nextInt(55) + MINIMUM_SIZE , rng.nextInt(55) + MINIMUM_SIZE, g2d.getColor()); //the +20 ensures a minimum size
+                shapes[i] = ShapeFactory.getRectangle(rng.nextInt(55) + MINIMUM_SIZE , rng.nextInt(55) + MINIMUM_SIZE, g2d.getColor()); //the +20 ensures a minimum size
                 shapes[i].setPos(PANEL_WIDTH/2,  (i * 80)+50);
                 shapes[i].draw(g2d);
             }
             else if (shapeSelection == 1) {
-                shapes[i] = new Square(rng.nextInt(55) + MINIMUM_SIZE, g2d.getColor());
+                shapes[i] = ShapeFactory.getSquare(rng.nextInt(55) + MINIMUM_SIZE, g2d.getColor());
                 shapes[i].setPos(PANEL_WIDTH/2, (i * 80) + 50);
                 shapes[i].draw(g2d);
             }
             else {
-                shapes[i] = new Circle(rng.nextInt(55) + MINIMUM_SIZE, g2d.getColor());
+                shapes[i] = ShapeFactory.getCircle(rng.nextInt(55) + MINIMUM_SIZE, g2d.getColor());
                 shapes[i].setPos(PANEL_WIDTH/2, (i * 80) + 50);
                 shapes[i].draw(g2d);
             }
@@ -76,22 +76,16 @@ public class Runner extends JPanel{
         JButton load = new JButton("Load Shapes");
         buttonsPanel.add(load);
 
-        load.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                image.drawSignal = true;
-                image.repaint();
-            }
+        load.addActionListener(e -> {
+            image.drawSignal = true;
+            image.repaint();
         });
 
         JButton sort = new JButton("Sort Shapes");
         buttonsPanel.add(sort);
-        sort.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                image.sortSignal = true;
-                image.repaint();
-            }
+        sort.addActionListener(e -> {
+            image.sortSignal = true;
+            image.repaint();
         });
         frame.add(buttonsPanel, "North");
         frame.setVisible(true);
