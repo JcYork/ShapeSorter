@@ -11,7 +11,7 @@ public class Circle extends Shape{
     @Override
     double area() {
         double r = diameter / 2.0;
-        return Math.PI * r * r;
+        return Math.PI * r * r; // Pi * r^2
     }
 
     @Override
