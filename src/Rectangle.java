@@ -5,9 +5,6 @@ public class Rectangle extends Shape{
     int width;
     int length;
 
-
-
-
     public double area(){
         return this.length * this.width;
     }

@@ -1,5 +1,6 @@
 public class SortingTechnique {
     //Sorting algorithm adapted from similar implementation on https://www.geeksforgeeks.org/insertion-sort/
+    //An implementation of insertion sort.
     public static void InsertionSort(Shape[] shapes){
         for(int i = 1; i < shapes.length; i++){
             Shape insertee = shapes[i];
